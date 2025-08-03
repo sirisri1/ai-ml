@@ -19,6 +19,7 @@
 
 ```
 md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
+```
 
 #### __init__.py
 - below command will create the __init__.py in all project folders
