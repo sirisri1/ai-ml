@@ -4,14 +4,28 @@
 
 ### Create Project Folder and Environment Setup
 
+### Create Project Folder and Environment Setup
+
 |#| Step Info | Command   | Notes   |
 |:---:| :---   | :--- | :--- |
 |1| Create a folder  | mkdir llmops-app |    |
-|2| Create the setup.py||
+|2| Create the setup.py|| Refer 'setup.py' section below for details
 |3| Create conda envvironment| | refer 'create conda environment' section below
 |4| Create  folders ||Refer 'create folders' section below
 |5| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
+|6| 
 
+#### setup.py
+
+```py
+from setup import setup, find_packages
+
+setup(
+    name = "<project-name>",
+    version = "0.1",
+    packages = find_packages()
+)
+```
 
 
 #### create conda environment
