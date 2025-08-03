@@ -8,11 +8,29 @@
 |#| Step Info | Command   | Notes   |
 |:---:| :---   | :--- | :--- |
 |1| Create a folder  | mkdir llmops-app |    |
-|2| Create the setup.py|| Refer 'setup.py' section below for details
-|3| Create conda envvironment| | refer 'create conda environment' section below
-|4| Create  folders ||Refer 'create folders' section below
-|5| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
-|6| 
+|2| Create  folders ||Refer 'create folders' section below
+|3| Create the __init__.py file || Refer ' __init__.py' section below for details
+|4| Create the setup.py|| Refer 'setup.py' section below for details
+|5| Create conda environment| | refer 'create conda environment' section below
+|6| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
+|7| 
+
+#### create folders
+
+```
+md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
+
+#### __init__.py
+- below command will create the __init__.py in all project folders
+
+```
+Get-ChildItem -Recurse -Directory | ForEach-Object {
+    $initPath = Join-Path $_.FullName '__init__.py'
+    if (-not (Test-Path $initPath)) {
+        New-Item -Path $initPath -ItemType File | Out-Null
+    }
+}
+```
 
 #### setup.py
 - python will look for __init__.py and will include as a package
@@ -26,19 +44,6 @@ setup(
     packages = find_packages()
 )
 ```
-- below command will create the __init__.py in all project folders
-
-```
-Get-ChildItem -Recurse -Directory | ForEach-Object {
-    $initPath = Join-Path $_.FullName '__init__.py'
-    if (-not (Test-Path $initPath)) {
-        New-Item -Path $initPath -ItemType File | Out-Null
-    }
-}
-```
-
-
-
 
 #### create conda environment
 
@@ -59,10 +64,6 @@ conda deactivate
 conda env list
 ```
 
-#### create folders
-
-```
-md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
 
 ```
 
