@@ -1,9 +1,23 @@
-# LLM OPS
+# LLM OPS 
 
-## Software Installation
+## July-19th
+
+### Create Project Folder and Environment Setup
+
+|#| Step Info | Command   | Notes   |
+|:---:| :---   | :--- | :--- |
+|1| Create a folder  | mkdir llmops-app |    |
+|2| Create the setup.py||
+|3| Create conda envvironment| | refer 'create conda environment' section below
+|4| Create  folders ||Refer 'create folders' section below
+|5| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
+
+
+
+#### create conda environment
 
 ```
-### creates the virtual env in anaconda3 folder
+# creates the virtual env in anaconda3 folder
 conda create -n venv_ur_name python==3.12 -y
 conda activate venv_ur_name
 conda deactivate
@@ -16,45 +30,32 @@ OR
 conda create -p venv_ur_name python==3.12 -y
 conda activate
 conda deactivate
-# Delete the folder venv_ur_name
 conda env list
 ```
 
-## Steps
+#### create folders
 
-1. Create a folder (llmops-app)
-2. Create the setup.py
-3. create requirements.txt
-4. create conda envvironment
-5. create the below folders in the llmops-app. execute the following  command in vscode to create the below folders md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
-   - config
-   - data
-   - exception
-   - faiss_index
-   - logger
-   - model
-   - notebook
-   - prompt
-   - src
-   - static
-   - templates
-   - utils
+md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
 
-4. We ned the below to create the RAG pipeline
-1. LLM Model 
+
+#### Minimum Requirements for the Project
+We need the below to create the RAG Pipeline
+
+##### LLM Model 
    -groq (free)
    - openai
    - gemini
    - claude
    - huggingface
    - ollama (local setup - need good configurations)
-2. embedding model
+##### embedding model
    - openai
    - gemini 
    - huggingface
-3. vector database
+##### vector database
    - 3 variant 
      - 1st- in memory (fiass)
      - 2nd -disk
      - 3rd - cloud (aws bedrock)
-4. 
+
+
