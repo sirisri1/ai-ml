@@ -40,5 +40,21 @@ conda env list
    - templates
    - utils
 
-
-
+4. We ned the below to create the RAG pipeline
+1. LLM Model 
+   -groq (free)
+   - openai
+   - gemini
+   - claude
+   - huggingface
+   - ollama (local setup - need good configurations)
+2. embedding model
+   - openai
+   - gemini 
+   - huggingface
+3. vector database
+   - 3 variant 
+     - 1st- in memory (fiass)
+     - 2nd -disk
+     - 3rd - cloud (aws bedrock)
+4. 
