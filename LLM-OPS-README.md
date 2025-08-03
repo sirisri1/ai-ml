@@ -15,6 +15,7 @@
 |6| 
 
 #### setup.py
+- python will look for __init__.py and will include as a package
 
 ```
 from setup import setup, find_packages
@@ -25,7 +26,17 @@ setup(
     packages = find_packages()
 )
 ```
+- below command will create the __init__.py in all project folders
+
 ```
+Get-ChildItem -Recurse -Directory | ForEach-Object {
+    $initPath = Join-Path $_.FullName '__init__.py'
+    if (-not (Test-Path $initPath)) {
+        New-Item -Path $initPath -ItemType File | Out-Null
+    }
+}
+```
+
 
 
 
