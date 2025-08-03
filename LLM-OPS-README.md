@@ -1,8 +1,7 @@
+
 # LLM OPS 
 
 ## July-19th
-
-### Create Project Folder and Environment Setup
 
 ### Create Project Folder and Environment Setup
 
@@ -17,7 +16,7 @@
 
 #### setup.py
 
-```py
+```
 from setup import setup, find_packages
 
 setup(
@@ -26,6 +25,8 @@ setup(
     packages = find_packages()
 )
 ```
+```
+
 
 
 #### create conda environment
@@ -49,8 +50,10 @@ conda env list
 
 #### create folders
 
+```
 md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
 
+```
 
 #### Minimum Requirements for the Project
 We need the below to create the RAG Pipeline
@@ -73,3 +76,5 @@ We need the below to create the RAG Pipeline
      - 3rd - cloud (aws bedrock)
 
 
+
+## July-19th
