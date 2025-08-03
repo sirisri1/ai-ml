@@ -12,13 +12,16 @@
 |3| Create the __init__.py file || Refer ' __init__.py' section below for details
 |4| Create the setup.py|| Refer 'setup.py' section below for details
 |5| Create conda environment| | refer 'create conda environment' section below
-|6| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
-|7| 
+|6| create python kernal|python -m pip install ipykernel
+|6| Create requirements.txt|| Refer section below
+|7| Minimum Requirements for the Project|| Refer 'Minimum Requirements for the Project' section below
+|8| 
 
 #### create folders
 
 ```
 md "config", "data", "exception", "faiss_index", "logger", "model", "notebook", "prompt", "src", "static", "templates", "utils"
+
 ```
 
 #### __init__.py
@@ -65,8 +68,41 @@ conda deactivate
 conda env list
 ```
 
+#### requirements.txt
+
+##### Add packages
+- add the below packages in the requirements.txt
 
 ```
+langchain
+python-dotenv
+ipykernel
+langchain_groq
+langchain_google_genai
+langchain_community
+pypdf
+faiss-cpu
+structlog
+PyMuPDF
+pandas
+streamlit
+langchain-core[tracing]
+pytest
+streamlit
+-e .
+```
+
+
+##### Install packages
+- run the below command to install packages
+
+```
+# -r denotes read
+pip install -r requirements.txt
+```
+
+
+
 
 #### Minimum Requirements for the Project
 We need the below to create the RAG Pipeline
